@@ -4,7 +4,6 @@ import java.util.Stack;
 
 public class DFS {
 
-    // Function to perform DFS traversal
     public static void dfs(ArrayList<ArrayList<Integer>> adjList, int startNode) {
         boolean[] visited = new boolean[adjList.size()];
         Stack<Integer> stack = new Stack<>();
@@ -17,7 +16,6 @@ public class DFS {
                 visited[currentNode] = true;
                 System.out.print((currentNode + 1) + " "); // Adjust index to 1-indexed
 
-                // Push all unvisited neighbors to the stack
                 for (int neighbor : adjList.get(currentNode)) {
                     if (!visited[neighbor]) {
                         stack.push(neighbor);
